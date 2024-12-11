@@ -1,0 +1,16 @@
+localStorage demo 
+<form>
+    <input id="nameid" type="text" placeholder="Enter name" required>
+    <button id="btnName">Save</button>
+    <script>
+        document.getElementById("btnName").addEventListener("click",DoSomething);
+        function DoSomething(){
+            let uname=document.getElementById("nameid").value;
+            alert("Hello: "+uname);
+            localStorage.setItem("yourname",uname);
+            //window.location.href = "page2.html";
+        }
+    </script>
+</form>
+
+<a href="page2.html">Go page 2</a>

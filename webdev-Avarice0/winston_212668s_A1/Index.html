@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <!-- nav bar here -->
+  <script>  //script is a embed executable javascript code
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") x.className += " responsive";
+      else x.className = "topnav";
+    }
+  </script>
+
+  <div class="topnav" id="myTopnav">
+    <a href="Index.html" class="active">Home</a>
+    <a href="Hobbies.html">Hobbies</a>
+    <a href="Education.html">Education</a>
+    <div class="dropdown">
+      <button class="dropbtn">Others
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Others.html">Others</a>
+        <a href="#">Future content</a>
+      </div>
+    </div>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
+  <h1 id="Home" class="fadegrow">Hi, Winston here.</h1>
+  <section class="storage" style="flex-direction:column;padding:5%;">
+    <section style="flex:1;">
+      <section>
+        <p style="text-align: left;font-size: 1.2em;">
+          Hi there! My name is Winston and welcome to my small corner of the internet. I am an aspiring Game Developer
+          that hopes to create indie games along with my friends.
+          Although the path ahead is hard, I won't give up as it has always been my dream to make games. What else can I
+          say, I love playing video games and I want to create what I love.
+          I hope to do my own art and music someday as well.
+        </p>
+        <aside><img src="Assets/Images/Profile.jpg" alt="Profile" style="margin:auto;width:20vw;max-width:300px;"></aside>
+      </section>
+      <section>
+\
+      </section>
+    </section>
+
+    <footer>
+      <p>Contact me at:</p>
+      <p>
+        <a href="mailto:winstonc0928@gmail.com">Email</a>
+        <br>
+        <a href="tel:123-456-7890">Phone</a>(not my actual number)
+      </p>
+    </footer>
+    
+  </section>
+</body>
+
+</html>

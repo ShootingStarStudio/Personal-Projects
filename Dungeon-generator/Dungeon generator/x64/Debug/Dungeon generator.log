@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\Users\winst\source\repos\Dungeon generator\Dungeon generator\Source.cpp(107,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\winst\source\repos\Dungeon generator\Dungeon generator\Source.cpp(287,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\winst\source\repos\Dungeon generator\Dungeon generator\Source.cpp(303,14): warning C4244: '=': conversion from 'time_t' to 'int', possible loss of data
+  Dungeon generator.vcxproj -> C:\Users\winst\source\repos\Dungeon generator\x64\Debug\Dungeon generator.exe

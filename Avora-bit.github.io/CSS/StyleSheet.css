@@ -1,0 +1,706 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: gray;
+    background-image: url('../Assets/Image/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* COLORS and FONTS */
+
+header {
+    background: orangered;
+}
+
+main {
+    background: darkslateblue;
+}
+
+aside {
+    background: dodgerblue;
+}
+
+footer {
+    background: deeppink;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.textbox {
+    background-color: #aaa;
+    margin: 0% 5% 0% 5%;
+    min-height: 95vh;
+    display: block;
+}
+
+@media screen and (max-width: 540px) {
+    /* mobile phone */
+}
+
+@media screen and (max-width: 720px) {
+    /* tablet */
+}
+
+@media screen and (max-width: 1440px) {
+    /* laptop/computer */
+}
+
+
+.topnav {
+    /* color of the nav bar's background */
+    overflow: hidden;
+    background-color: #333;
+    /* position: fixed;*/
+    top: 1%;
+    left: 1%;
+    right: 1%;
+}
+
+.topnav a {
+    /* color of the text in the nav bar */
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a.active,
+.active {
+    /* when the tab is selected */
+    background-color: #04AA6D;
+    color: #f2f2f2;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    padding: 20px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    font-size: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #555;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 540px) {
+
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* tree diagram for instrument types */
+.tree-diagram {
+    width: 80%;
+    margin: auto;
+}
+
+.tree-diagram ul {
+    display: flex;
+    position: relative;
+
+    /* Reset */
+    list-style-type: none;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+}
+
+.tree-diagram ul ul::before {
+    border-right: 3px solid rgba(0, 0, 0, 0.8);
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 50%;
+
+    /* Size */
+    height: 1rem;
+    width: 50%;
+}
+
+.tree-diagram li {
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    position: relative;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tree-diagram li::before {
+    border-right: 3px solid rgba(0, 0, 0, 0.8);
+    border-top: 3px solid rgba(0, 0, 0, 0.8);
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 50%;
+
+    /* Size */
+    height: 1rem;
+    width: 50%;
+}
+
+.tree-diagram li::after {
+    border-top: 3px solid rgba(0, 0, 0, 0.8);
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* Size */
+    width: 50%;
+}
+
+.tree-diagram li:first-child::before,
+.tree-diagram li:last-child::after {
+    /* Remove the top of border from the first and last items */
+    border-top: none;
+}
+
+/* Add a root item if you want */
+li.tree-diagram__root::before {
+    border-right: none;
+}
+
+/* timeline */
+
+* {
+    box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.timeline .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 540px) {
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    max-width: 300px;
+    transition: max-width 0.3s ease-out;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible.active {
+    min-width: 300px;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible.active:after {
+    content: "\2212";
+}
+
+.collapsecontent {
+    padding: 0 18px;
+    width: 100%;
+    max-width: 300px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f1f1f1;
+}
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.synth {
+    overflow-x: scroll;
+    width: 60%;
+    white-space: nowrap;
+    margin: auto;
+    margin-top: auto;
+}
+
+.keyboard {
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 540px) {
+    .synth {
+        width: 90%;
+    }
+}
+
+.key {
+    cursor: pointer;
+    font: 20px sans-serif;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 120px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 3px 3px lightblue;
+    display: inline-block;
+    position: relative;
+    margin-right: 3px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* key name */
+.key div {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    pointer-events: none;
+}
+
+/* octave number */
+.key div sub {
+    font-size: 10px;
+    pointer-events: none;
+}
+
+.key:hover {
+    background-color: #ddd;
+}
+
+.key:active {
+    background-color: #000;
+    box-shadow: 3px 3px darkblue;
+    color: #fff;
+}
+
+.octave {
+    display: inline;
+    padding: 0 6px 0 0;
+}
+
+.settingsBar {
+    padding-top: 8px;
+    font: 14px sans-serif;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+    height: 50px;
+}
+
+.leftSettings {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.leftSettings span,
+.leftSettings input {
+    vertical-align: middle;
+}
+
+.rightSettings {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.rightSettings span {
+    vertical-align: middle;
+}
+
+.rightSettings input {
+    vertical-align: baseline;
+}
+
+/* slideshow scores */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media screen and (max-width: 540px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+
+/* flip card for famous people, based on harry potter's magic cards */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 540px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}

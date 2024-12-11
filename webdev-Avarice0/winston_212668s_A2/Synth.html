@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Play the Synth</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="JS/script.js" defer></script>
+    <link rel="stylesheet" href="CSS/StyleSheet.css">
+
+    <!-- background -->
+</head>
+
+<body>
+    <!-- play the piano -->
+    <!-- nav bar here -->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">
+            <img src="Assets/Image/Logo.png" alt="Logo" style="height: 20px">Home
+        </a>
+        <a href="history.html">Introduction and History</a>
+        <a href="synth.html" class="active">Play the Synth</a>
+        <a href="people.html">Famous People</a>
+        <a href="javascript:void(0);" class="icon" onclick="ShowTopNav()">&#9834;</a>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Assets/Image/slide_1.png" alt="score" style="width: 100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Assets/Image/slide_2.png" alt="score" style="width: 100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Assets/Image/slide_3.png" alt="score" style="width: 100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Assets/Image/slide_4.png" alt="score" style="width: 100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Assets/Image/slide_5.png" alt="score" style="width: 100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="Assets/Image/slide_6.png" alt="score" style="width: 100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+
+
+    <div class="settingsBar">
+        <div class="leftSettings">
+            <span>Volume: </span>
+            <input type="range" min="0.0" max="10.0" step="0.1" value="5.0" list="volumes" name="volume">
+            <datalist id="volumes">
+                <option value="0.0" label="Mute">
+                <option value="10.0" label="100%">
+            </datalist>
+        </div>
+
+        <div class="rightSettings">
+            <span>Current waveform: </span>
+            <select name="waveform">
+                <option value="sine" selected>Sine</option>
+                <option value="square">Square</option>
+                <option value="sawtooth">Sawtooth</option>
+                <option value="triangle">Triangle</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="synth">
+        <div class="keyboard"></div>
+    </div>
+
+    <div>
+        <p style="font-size: 3em;color:red">
+            Due to lack of time, i was unable to fine tune the settings for the synth, please bear with the slightly
+            glitchy sounds
+        </p>
+    </div>
+</body>
+
+
+</html>

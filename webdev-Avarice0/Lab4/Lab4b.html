@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FLEXGRID</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            flex: 1 1;
+            padding: 5px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: lightgrey;
+        }
+
+        /* Container for flexboxes */
+        section {
+            display: flex;
+        }
+
+        #sectionmain {
+            background: white;
+        }
+
+        #sectiongreen {
+            background: green;
+            flex-basis: 60%;
+        }
+
+        #sectionyellow {
+            background: coral;
+            flex-basis: 40%;
+        }
+
+        /* Style the navigation menu */
+        nav {
+            background: lightblue;
+        }
+
+        /* Style the content */
+        article {
+            background-color: pink;
+        }
+
+        /* Style the sidebar */
+        aside {
+            background-color: lightyellow;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: lightgreen;
+        }
+
+        .vertical {
+            flex-direction: column;
+        }
+
+        .horizontal {
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <header>header
+        <nav>nav</nav>
+    </header>
+    <section  id = "sectionmain" class = "horizontal">
+        <section id = "sectiongreen" class = "vertical">section
+            <header>header</header>
+            <article>article
+                <header>header</header>
+                <p>parapara</p>
+                <section>
+                    <p>parapara</p>
+                    <aside>aside</aside>
+                </section>
+            </article>
+            <footer>footer</footer>
+        </section>
+
+        <section id = "sectionyellow" class = "vertical">section
+            <header>header</header>
+            <nav>nav</nav>
+        </section>
+    </section>
+
+    <footer>footer</footer>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <style>
+        .a{
+            width: 100px;
+            transition: background-color 2s, width 2s;
+        }
+        .a:hover{
+            background-color: red;
+            width: 300px;
+        }
+
+        @keyframes example{
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+        .ani1 {
+            width: 100px;
+            height: 100px;
+            background-color:red;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+
+
+        /*=============================================*/
+
+
+        .image-container {
+        position:relative;
+        overflow:hidden;
+        }
+        .fadingEffect {
+            position:absolute;
+            top:0; bottom:0; right:0;
+            width:0%;
+            background:grey;
+            -moz-animation: showHide 5s ease-in 0s 1 backwards; /* Firefox */
+            -webkit-animation: showHide 5s ease-in 0s 1 backwards; /* Safari and Chrome */
+            -ms-animation: showHide 5s ease-in  0s 1 backwards; /* IE10 */
+            -o-animation: showHide 5s ease-in 0s 1 backwards; /* Opera */
+            animation: showHide 5s ease-in 0s 1 backwards;
+        }
+        @-webkit-keyframes showHide { /* Chrome, Safari */
+            0% {width:100%;}
+            100% {width:0%;}
+        }
+        @-moz-keyframes showHide { /* FF */
+            0% {width:100%;}
+            100% {width:0%;}
+        }
+        @-ms-keyframes showHide { /* IE10 */
+            0% {width:100%}
+            100% {width:0%;}
+        }
+        @-o-keyframes showHide { /* Opera */
+            0% {width:100%}
+            100% {width:0%;}
+        }
+        @keyframes showHide {
+            0% {width:100%;}
+            100% {width:0%;}
+        }
+        
+    </style>
+</head>
+    <body>
+        <div class="a">hover</div>
+
+        <div class="image-container">
+            <img src="fancy image link" />
+            <div class="fadingEffect"></div>
+        </div>
+
+
+
+    </body>
+</html>
+
+

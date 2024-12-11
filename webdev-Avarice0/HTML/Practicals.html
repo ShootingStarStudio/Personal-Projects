@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang = "en">
+<style>
+body{
+/* background-image: url('https://i.pinimg.com/originals/74/43/a3/7443a31b6a19e5630b94a6538ff9bdd1.gif');background-image: url('https://i.pinimg.com/originals/74/43/a3/7443a31b6a19e5630b94a6538ff9bdd1.gif');
+background-color:rgb(159, 209, 245);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; */
+}
+div {
+/* width: 0px;
+border: 1px solid rgb(0, 0, 0);
+padding: 25px;
+margin: 5px; */
+}
+/* display in table form, respeonsive grid */
+
+</style>
+<!-- practical 1-introductions-->
+    <!-- <body>
+        <h1> Header h1-h6</h1>
+            <p>
+                Paragraph of text
+            </p>
+
+        <h2> Sub header, less important, smaller than h2 </h2>
+            <p>
+                More text under the second header
+            </p>
+        <h3> Modifier of text, Bold, Italics, Superscript and Subscript</h3>
+            <p>
+                <b>Bold</b>
+                <strong>Strong</strong>
+            </p>
+            <p>
+                <i>Italics</i>
+                <em>Emphasis</em>
+            </p>
+            <p>
+                Super<sup>script</sup>
+            </p>
+            <p>
+                Sub<sub>script</sub>
+            </p>
+            <p>
+                <ins>Inserted text</ins>
+            </p>
+            <p>
+                <del>deleted text</del>
+                <s>Strike through</s>
+            </p>
+        <h4> Types of lists </h4>
+            <ul>
+                <li>This</li>
+                <li>is</li>
+                <li>Unordered</li>
+            </ul>
+            <ol>
+                <li>This</li>
+                <li>is</li>
+                <li>Ordered</li>
+            </ol>
+            <dl>
+                <dt>Description</dt>
+                <dd>Indented description</dd>
+                <dt>Milk</dt>
+                <dd>white cold drink</dd>
+            </dl>
+        <h5> Links & Images</h5>
+        <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = "_blank" rel = "noopener noreferrer">Link to webpage, opens on new tab</a><br>
+        <img src = "data:image/png;base64,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" alt = "HTML logo" style = "width:300px;height:400px">
+        <hr>
+        <h6> Pre formatting</h6>
+            <pre>
+This is a pre formatted text that 
+maintains the formatting of the 
+exact lines.
+            </pre>
+        <div>Stuff</div>
+    </body> -->
+
+<!-- practical 2-folders and id, organizations-->
+    <body>
+        <h4 id="Home">Home Header</h4>
+            <p>
+                Lorem ipsum
+            </p>
+        <h4 id="Table">Table of Contents </h4>
+            <table border = 1px>
+                <tr>
+                    <th>Name:</th>
+                    <td>Links</td>
+                </tr>
+                <tr>
+                    <th>Daily</th>
+                        <td><a href="Lab02/Hobbies/Gaming.html">Gaming</a></td>
+                        <td><a href="Lab02/Hobbies/Lifestyle.html">Lifestyle</a></td>
+                </tr>
+                <tr>
+                    <th>Map Tool</th>
+                        <td><a href="Lab02/Map/Map.html">Map tool</a></td>
+                </tr>
+            </table>
+        <h4>Timetable here</h4>
+        <table border = 1px>
+            <tr>
+                <th>&nbsp;</th>
+                <td>0800-0900</td>
+                <td>0900-1000</td>
+                <td>1000-1100</td>
+                <td>1100-1200</td>
+                <td>1200-1300</td>
+                <td>1300-1400</td>
+                <td>1400-1500</td>
+                <td>1500-1600</td>
+                <td>1600-1700</td>
+                <td>1700-1800</td>
+            </tr>
+            <tr>
+                <th>Monday</th>
+                <td>&nbsp;</td>
+                <td>2DGC</td>
+                <td>2DGC</td>
+                <td>2DGC</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>2DGC</td>
+                <td>RiR</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th>Tuesday</th>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>Web Dev</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>GSM</td>
+                <td>GSM</td>
+                <td>GSM</td>
+                <td>GSM</td>
+            </tr>
+            <tr>
+                <th>Wednesday</th>
+                <td>&nbsp;</td>
+                <td>2DGC</td>
+                <td>2DGC</td>
+                <td>2DGC</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>2DGC</td>
+                <td>RiR</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th>Thursday</th>
+                <td>&nbsp;</td>
+                <td>2DGC</td>
+                <td>2DGC</td>
+                <td>2DGC</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>2DGC</td>
+                <td>RiR</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th>Friday</th>
+                <td>&nbsp;</td>
+                <td>2DGC</td>
+                <td>2DGC</td>
+                <td>2DGC</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>2DGC</td>
+                <td>RiR</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+            
+    </body>
+</html>
+<!-- this is a comment -->
+<!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro -->
+<!-- https://www.w3schools.com/css/css_grid.asp -->
+<!-- href can also open emails and dial numbers -->
+<!-- <a href = "mailto:EMAIL@EMAIL.COM" target = "_blank" rel = "noopener noreferrer">Email location</a><br> -->
+<!-- <a href = "tel:_123456789" target = "_blank" rel = "noopener noreferrer">If on phone, dials the number directly</a><br> -->

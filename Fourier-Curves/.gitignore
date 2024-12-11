@@ -1,0 +1,9 @@
+*.opendb
+*.vsidx
+*.db
+*.db-shm
+*.db-wal
+*.ppm
+*.exe
+*.pdb
+*.ipch

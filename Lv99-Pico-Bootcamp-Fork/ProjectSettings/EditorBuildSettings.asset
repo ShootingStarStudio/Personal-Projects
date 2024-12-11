@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/VRBootcamp/Scenes/ShootingRange.unity
+    guid: 5261234aa9c17df4b899c050304e63dc
+  - enabled: 0
+    path: Assets/VRBootcamp/Scenes/BasicDynamicMoveSample.unity
+    guid: 67c44b826b683b1488804e75c316c6f6
+  - enabled: 0
+    path: Assets/VRBootcamp/Scenes/BasicRemoteGrabSample.unity
+    guid: 0f306f2f39501ba489fe7f812195e185
+  - enabled: 0
+    path: Assets/VRBootcamp/Scenes/BasicTeleportSample.unity
+    guid: 9a1eef3d7411cf645885362ccd34d8a4
+  - enabled: 0
+    path: Assets/VRBootcamp/Scenes/ContinuosMoveAndContinuosTurnSample.unity
+    guid: dd992a4ab17466a40ac346d5062f3502
+  - enabled: 0
+    path: Assets/VRBootcamp/Scenes/ContinuosMoveAndSnapTurnSample.unity
+    guid: 70fecfb6aed5c9f48966feb7966de6f8
+  - enabled: 0
+    path: Assets/VRBootcamp/Scenes/DirectAndRemoteGrabSample.unity
+    guid: 4168ca9c83dd84944bf8cab7f5fa8aac
+  m_configObjects:
+    Unity.XR.PICO.LivePreview.Settings: {fileID: 11400000, guid: 1f865c99b3832d04e9b9a2a904acbcc3,
+      type: 2}
+    Unity.XR.PXR.Settings: {fileID: 11400000, guid: a34c692ba3c173b47820683668db274b,
+      type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 76d089cb9dbc6ab438902b434aa3ad62,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6ef0bc8caee1ea944be993202a17a3b7,
+      type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 3efa11b5862f0a742b3b942529fe85f2,
+      type: 2}

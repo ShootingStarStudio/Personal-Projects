@@ -1,0 +1,16 @@
+<h1>Somename</h1>
+<button id="btnName">Clear</button>
+<script>
+    if(yourname=localStorage.getItem("yourname")){
+        document.getElementsByTagName("h1")[0].innerHTML=yourname;
+    }
+
+    document.getElementById("btnName").addEventListener("click",DoSomething);
+    function DoSomething(){
+        localStorage.clear("yourname");
+        alert("clear");
+        //window.location = "page1.html";
+    }
+    
+</script>
+<a href="page1.html">Go page 1</a>
